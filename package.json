@@ -14,7 +14,7 @@
     "debug": "^4.3.3"
   },
   "devDependencies": {
-    "@strapi-community/eslint-config": "0.1.5",
+    "@strapi-community/eslint-config": "0.4.3",
     "eslint": "8.21.0"
   },
   "scripts": {
