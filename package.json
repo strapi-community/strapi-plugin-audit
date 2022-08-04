@@ -1,0 +1,52 @@
+{
+  "name": "strapi-plugin-audit",
+  "version": "1.0.0-alpha.0",
+  "description": "Plugin used to centralize Audit Logs for the Strapi Admin Panel",
+  "strapi": {
+    "displayName": "Audit",
+    "name": "audit",
+    "description": "Plugin used to centralize Audit Logs for the Strapi Admin Panel",
+    "required": false,
+    "kind": "plugin"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "debug": "^4.3.3"
+  },
+  "devDependencies": {
+    "@strapi-community/eslint-config": "0.1.5",
+    "eslint": "8.8.0"
+  },
+  "scripts": {
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix"
+  },
+  "author": {
+    "name": "Strapi Community",
+    "url": "https://github.com/strapi-community"
+  },
+  "maintainers": [
+    {
+      "name": "Strapi Community",
+      "url": "https://github.com/strapi-community"
+    },
+    {
+      "name": "Derrick Mehaffy",
+      "email": "derrickmehaffy@gmail.com",
+      "url": "https://github.com/derrickmehaffy"
+    },
+    {
+      "name": "Kevin Antonio Rateni Iatauro",
+      "url": "https://github.com/WalkingPizza"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/strapi-community/strapi-plugin-audit/issues"
+  },
+  "homepage": "https://github.com/strapi-community/strapi-plugin-audit#readme",
+  "engines": {
+    "node": ">=14.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
