@@ -1,3 +1,7 @@
 'use strict';
 
-module.exports = {};
+const audit = require('./audit');
+
+module.exports = {
+  audit,
+};
