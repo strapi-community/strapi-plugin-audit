@@ -93,7 +93,12 @@ We are actively looking for contributors, maintainers, and others to help shape 
 
 If interested please feel free to submit issues and pull requests!
 
-**Please Note**: This package is maintained collectively by the [strapi community organization](https://github.com/strapi-community). While there may be a few co-maintainer, they are not the sole maintainers of this code and this code does not belong to the co-maintainers but the community organization itself.
+**Please Note**: This package is maintained collectively by the [Strapi Community Organization](https://github.com/strapi-community). While there may be a few co-maintainers, they are not the sole maintainers of this code and this code does not belong to the co-maintainers but the community organization itself.
+
+Current co-maintainers are:
+
+- [Derrick Mehaffy](https://github.com/derrickmehaffy)
+- [Kevin Antonio Rateni Iatauro](https://github.com/walkingpizza)
 
 ## License
 

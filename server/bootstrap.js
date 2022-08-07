@@ -1,5 +1,8 @@
 'use strict';
 
+const initAuditMiddleware = require('./middlewares/audit');
+
 module.exports = ({ strapi }) => {
-  // bootstrap phase
+  // Init the audit middleware
+  initAuditMiddleware({ strapi });
 };

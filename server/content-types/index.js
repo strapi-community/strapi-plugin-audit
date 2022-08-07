@@ -1,3 +1,7 @@
 'use strict';
 
-module.exports = {};
+const auditLog = require('./audit-log');
+
+module.exports = {
+  'audit-log': { schema: auditLog },
+};
