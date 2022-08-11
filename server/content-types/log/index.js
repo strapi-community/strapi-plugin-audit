@@ -2,11 +2,11 @@
 
 module.exports = {
   kind: 'collectionType',
-  collectionName: 'audit_logs',
+  collectionName: 'logs',
   info: {
-    singularName: 'audit-log',
-    pluralName: 'audit-logs',
-    displayName: 'Audit Log',
+    singularName: 'log',
+    pluralName: 'logs',
+    displayName: 'Log',
   },
   options: {
     draftAndPublish: false,
@@ -19,15 +19,15 @@ module.exports = {
     },
     'content-type-builder': {
       visible: false,
-    }
+    },
   },
   attributes: {
-    adminUser: {
+    user: {
       type: 'relation',
       relation: 'oneToOne',
       target: 'admin::user',
     },
-    adminUserIPAddress: {
+    ip: {
       type: 'string',
       required: true,
       regex:
@@ -41,11 +41,11 @@ module.exports = {
       type: 'string',
       required: true,
     },
-    entityModel: {
+    model: {
       type: 'string',
     },
-    entityID: {
-      type: 'integer',
+    affectedEntities: {
+      type: 'json',
     },
     plugin: {
       type: 'string',
