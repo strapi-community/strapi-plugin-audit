@@ -9,10 +9,7 @@
     "required": false,
     "kind": "plugin"
   },
-  "dependencies": {
-    "chalk": "^5.0.1",
-    "debug": "^4.3.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@strapi-community/eslint-config": "0.4.3",
     "eslint": "8.21.0"
@@ -48,5 +45,8 @@
     "node": ">=14.x.x <=16.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "lodash": "^4.17.21"
+  }
 }
