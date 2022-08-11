@@ -1,1 +1,4 @@
-{}
+{
+  "audit.plugin.name": "Giorgio",
+  "homepage.audit_logs": "Audit Logs"
+}
