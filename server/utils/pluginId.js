@@ -2,6 +2,4 @@
 
 const pluginPkg = require('../../package.json');
 
-module.exports = {
-  pluginId: pluginPkg.strapi.name,
-};
+module.exports = pluginPkg.strapi.name;
