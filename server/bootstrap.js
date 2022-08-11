@@ -4,26 +4,16 @@ const initAuditMiddleware = require('./middlewares/audit');
 const pluginId = require('./utils/pluginId');
 const _ = require('lodash');
 
-module.exports = ({ strapi }) => {
+module.exports = async ({ strapi }) => {
   const actionsService = strapi.plugin(pluginId).service('actions');
 
-  actionsService.register('collection-types.create', 'Created an entry', ctx => {
-    const affectedEntity = _.get(ctx, 'response.body.id');
+  // Load default actions
+  await actionsService.loadRouteActions();
 
-    return {
-      ...actionsService.defaultHandler(ctx),
-      affectedEntities: JSON.stringify(affectedEntity ? [affectedEntity] : []),
-    };
-  });
+  // Load actions registered through the extension system
+  await actionsService.loadExtendedActions();
 
-  actionsService.register('collection-types.bulkDelete', 'Deleted entries', ctx => {
-    const affectedEntities = _.get(ctx, 'request.body.ids', []);
-
-    return {
-      ...actionsService.defaultHandler(ctx),
-      affectedEntities: JSON.stringify(affectedEntities),
-    };
-  });
+  console.log(strapi.plugins[pluginId].routes.admin.routes);
 
   // Init the audit middleware
   initAuditMiddleware({ strapi });

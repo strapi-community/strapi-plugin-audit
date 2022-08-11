@@ -1,3 +1,7 @@
 'use strict';
 
-module.exports = {};
+const log = require('./log');
+
+module.exports = {
+  log,
+};

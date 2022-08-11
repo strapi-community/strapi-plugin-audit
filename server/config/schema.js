@@ -14,7 +14,18 @@ module.exports = yup
             .oneOf(METHODS)
             .uppercase()
         ),
-        plugins: yup.array(yup.string()),
+        models: yup.array(yup.string()),
+        plugins: yup.lazy(plugins =>
+          Array.isArray(plugins)
+            ? yup.array(yup.string())
+            : yup.object({
+                [yup.string()]: yup.object({
+                  actions: yup.lazy(actions =>
+                    Array.isArray(actions) ? yup.array(yup.string()) : yup.string().matches(/\*/)
+                  ),
+                }),
+              })
+        ),
       })
       .noUnknown(),
   })

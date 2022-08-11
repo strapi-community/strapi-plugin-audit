@@ -11,6 +11,9 @@ module.exports = ({ strapi }) => {
 
   strapi.server.use(async (ctx, next) => {
     await next();
+
+    if (!auditService.shouldAuditRoute(ctx)) console.log('Not auditing request');
+
     if (auditService.shouldAuditRoute(ctx)) await auditService.log(ctx);
   });
 };
