@@ -1,7 +1,9 @@
 'use strict';
 
-const auditLog = require('./auditLog');
+const actions = require('./actions');
+const audit = require('./audit');
 
 module.exports = {
-  auditLog,
+  actions,
+  audit,
 };
