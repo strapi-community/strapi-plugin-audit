@@ -32,7 +32,7 @@ module.exports = ({ strapi }) => ({
     const data = action.handler(ctx);
 
     try {
-      return await strapi.entityService.create(`plugin::${pluginId}.audit-log`, { data });
+      return await strapi.entityService.create(`plugin::${pluginId}.log`, { data });
     } catch (error) {
       throw new Error(error);
     }
