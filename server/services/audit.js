@@ -27,8 +27,6 @@ module.exports = ({ strapi }) => ({
     const actionsService = strapi.plugin(pluginId).service('actions');
     const action = actionsService.get(ctx.state.route.handler);
 
-    console.log(ctx.response);
-
     const data = action.handler(ctx);
 
     try {
