@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@strapi-community/eslint-config": "0.4.3",
-    "eslint": "8.21.0"
+    "eslint": "8.22.0"
   },
   "scripts": {
     "eslint": "eslint .",
