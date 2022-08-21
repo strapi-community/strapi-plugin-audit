@@ -1,0 +1,2 @@
+[submodule "."]
+	url = https://github.com/strapi-community/strapi-plugin-audit
